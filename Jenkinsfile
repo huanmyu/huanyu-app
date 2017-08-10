@@ -7,7 +7,7 @@ pipeline {
                 sh 'echo "Build Success"'
             }
         }
-        stage('build') {
+        stage('Test') {
             steps {
                 sh 'php yii serve --port=8888'
                 sh 'echo "Test Success"'
