@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'php --version'
-                sh 'php yii serve --port=8888'
+                sh 'docker run --rm --interactive --tty --volume $PWD:/app --user $(id -u):$(id -g) composer install'
             }
         }
     }
